@@ -7,7 +7,7 @@ GeekTime Go训练营仓库
 
 ## HomeWork
 * Q: 我们在数据库操作的时候，比如 dao 层中当遇到一个 sql.ErrNoRows 的时候，是否应该 Wrap 这个 error，抛给上层。为什么，应该怎么做请写出代码？
-* A: 
+* A: sql.ErrNoRows应该属于正常业务行为，不应该被wrap，可以在发现错误时记录下，不影响主流程
 ```DDL
 CREATE DATABASE geek_time;
 
